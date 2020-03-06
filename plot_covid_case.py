@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 from datetime import datetime, timedelta
 day = timedelta(1)
 
-REPO = '/home/tom/COVID-19/csse_covid_19_data/csse_covid_19_time_series'
+REPO = '2019-nCoV/csse_covid_19_data/csse_covid_19_time_series'
 CASES = os.path.join(REPO,'time_series_19-covid-Confirmed.csv')
 
 cases = pd.read_csv(CASES)
