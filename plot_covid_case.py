@@ -21,12 +21,14 @@ F=cases[cases.country=='France'].T[4:]
 G=cases[cases.country=='Germany'].T[4:]
 S=cases[cases.country=='Sweden'].T[4:]
 I=cases[cases.country=='Italy'].T[4:]
+B=cases[cases.country=='Belgium'].T[4:]
 
 
 deltaF = 12
 deltaG = 12
 deltaS = 16
 deltaI = 4
+deltaB = 16
 
 fig = plt.Figure(figsize=(10,6))
 #fig.autofmt_xdate(rotation=30)
@@ -37,6 +39,7 @@ plt.plot([date-deltaI*day for date in dates],I,'-o', label='Italy -%d days'%delt
 plt.plot([date-deltaF*day for date in dates],F,'-o', label='France -%d days'%deltaF)
 plt.plot([date-deltaG*day for date in dates],G,'-o', label='Germany -%d days'%deltaG)
 plt.plot([date-deltaS*day for date in dates],S,'-o', label='Sweden -%d days'%deltaS)
+plt.plot([date-deltaB*day for date in dates],B,'-o', label='Belgium -%d days'%deltaB)
 
 ax = list(plt.axis())
 ax[0] = dates[20].toordinal()
