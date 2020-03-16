@@ -16,7 +16,7 @@ dates = [datetime(int(t[2])+2000,int(t[0]),int(t[1])) for t in ts]
 
 cases.rename(columns={'Province/State':'state', 'Country/Region':'country'},inplace=True)
 
-SK=cases[cases.country=='South Korea'].T[4:]
+SK=cases[cases.country=='Korea, South'].T[4:]
 F=cases[cases.country=='France'].T[4:]
 G=cases[cases.country=='Germany'].T[4:]
 S=cases[cases.country=='Sweden'].T[4:]
@@ -26,9 +26,9 @@ B=cases[cases.country=='Belgium'].T[4:]
 
 deltaF = 12
 deltaG = 12
-deltaS = 16
+deltaS = 17
 deltaI = 4
-deltaB = 16
+deltaB = 17
 
 fig = plt.Figure(figsize=(10,6))
 #fig.autofmt_xdate(rotation=30)
@@ -46,6 +46,6 @@ ax[0] = dates[20].toordinal()
 plt.axis(ax)
 
 plt.ylabel('Number of COVID19 cases (WHO data)')
-plt.legend(loc='upper left')
+plt.legend(loc='lower right')
 plt.tight_layout()
 plt.show()

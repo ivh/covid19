@@ -16,7 +16,7 @@ dates = [datetime(int(t[2])+2000,int(t[0]),int(t[1])) for t in ts]
 
 cases.rename(columns={'Province/State':'state', 'Country/Region':'country'},inplace=True)
 
-SK=cases[cases.country=='South Korea'].T[4:]
+SK=cases[cases.country=='Korea, South'].T[4:]
 F=cases[cases.country=='France'].T[4:]
 G=cases[cases.country=='Germany'].T[4:]
 S=cases[cases.country=='Sweden'].T[4:]
